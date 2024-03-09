@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <script>
+        class Employee {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        
+        const employees = [
+            new Employee("John Doe", 30),
+            new Employee("Alice Smith", 25),
+            new Employee("Bob Johnson", 35),
+            new Employee("Eva Green", 28),
+            new Employee("David Brown", 40)
+        ];
+
+        
+        const sortedEmployees = employees.sort((a, b) => a.name.localeCompare(b.name));
+
+        s
+        window.onload = function() {
+            const employeeList = document.getElementById("employee-list");
+            sortedEmployees.forEach(employee => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `Name: ${employee.name}, Age: ${employee.age}`;
+                employeeList.appendChild(listItem);
+            });
+        };
+    </script>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <ul id="employee-list"></ul>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Effect</title>
+    <style>
+       
+        p:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mouse Hover Effect</h1>
+    <p>Move your mouse over this paragraph to see the effect!</p>
+</body>
+</html>

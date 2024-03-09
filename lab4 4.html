@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Falsy Values</title>
+    <script>
+        function removeFalsyValues(arr) {
+            return arr.filter(item => {
+                
+                return ![null, 0, "", false, undefined, NaN].includes(item);
+            });
+        }
+
+        window.onload = function() {
+            const originalArray = [0, 1, null, "hello", "", false, undefined, NaN, true];
+            const filteredArray = removeFalsyValues(originalArray);
+            console.log(filteredArray); 
+        };
+    </script>
+</head>
+<body>
+    <h1>Remove Falsy Values</h1>
+    <!-- No visible content -->
+</body>
+</html>

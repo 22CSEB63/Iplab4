@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New String</title>
+    <script>
+        function createNewString(inputString) {
+            if (inputString.length < 3) {
+                return inputString; 
+            }
+
+           
+            const firstThree = inputString.substring(0, 3);
+
+            
+            const lastThree = inputString.substring(inputString.length - 3);
+
+            
+            return firstThree + lastThree;
+        }
+
+        window.onload = function() {
+            const originalString = "abcdefghi";
+            const newString = createNewString(originalString);
+            console.log("New String:", newString); 
+        };
+    </script>
+</head>
+<body>
+    <h1>Create New String</h1>
+    
+</body>
+</html>

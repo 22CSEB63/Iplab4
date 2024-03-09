@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most Frequent Word</title>
+    <script>
+        function findMostFrequentWord(inputString) {
+            
+            const cleanedString = inputString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").toLowerCase();
+
+           
+            const wordsArray = cleanedString.split(/\s+/);
+
+            
+            const wordFreq = {};
+
+           
+            wordsArray.forEach(word => {
+                if (wordFreq[word]) {
+                    wordFreq[word]++;
+                } else {
+                    wordFreq[word] = 1;
+                }
+            });
+
+            
+            let mostFrequentWord = "";
+            let maxFrequency = 0;
+
+            for (const word in wordFreq) {
+                if (wordFreq[word] > maxFrequency) {
+                    mostFrequentWord = word;
+                    maxFrequency = wordFreq[word];
+                }
+            }
+
+            return mostFrequentWord;
+        }
+
+        window.onload = function() {
+            const inputString = "This is a sample string. It contains some sample words.";
+            const mostFrequent = findMostFrequentWord(inputString);
+            console.log("Most frequent word:", mostFrequent); 
+        };
+    </script>
+</head>
+<body>
+    <h1>Most Frequent Word</h1>
+    
+</body>
+</html>
